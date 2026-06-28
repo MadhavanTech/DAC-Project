@@ -6,9 +6,8 @@ public class DAC {
     private String text;
     private String[] voices;
     private String errorMessage;
-    private String filePath; // where the saved .wav sound file lives on disk
+    private String filePath;
 
-    // ✅ No-arg constructor (required by Spring/Jackson)
     public DAC() {}
 
     public DAC(String text, byte[] audioData, String[] voices) {
@@ -26,7 +25,7 @@ public class DAC {
         this.errorMessage = null;
     }
 
-    // ✅ Getters
+    
     public byte[] getAudioData() {
         return audioData;
     }
@@ -47,7 +46,6 @@ public class DAC {
         return filePath;
     }
 
-    // ✅ Setters
     public void setAudioData(byte[] audioData) {
         this.audioData = audioData;
     }
